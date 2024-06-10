@@ -2,6 +2,10 @@
 .form {
     transform: translateY(-7%)
 }
+
+body{
+  background-color: #1E1E1E;
+}
 .main{
     position: absolute;
       top: 50%;
@@ -9,13 +13,14 @@
       margin-right: -50%;
       transform: translate(-50%, -50%);
     width: 500px;
-    height: 500px;
+    height: 570px;
     background: rgb(255, 255, 255);
     overflow: hidden;
     border-radius: 25px;
     box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.529);
   }
   .radio-inputs {
+    
     margin-left: 20%;
     margin-bottom: 20px;
     position: relative;
@@ -26,11 +31,13 @@
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
-    width: 300px;
+    width: 60%;
     font-size: 14px !important;
   }
   
   .radio-inputs .radio {
+
+    line-height: 3.5vh !important;
     flex: 1 1 auto;
     text-align: center;
   }
@@ -85,14 +92,13 @@
   }
   
   input{
-    border:2px solid rgb(0,201,157);
+    border:2px solid #a46bec;
     width: 70%;
     height: 20px;
     background: #ffffff;
     justify-content: center;
     display: flex;
     margin: 20px auto;
-
     outline: none;
     border-radius: 5px;
     padding-left:10px !important;
@@ -108,7 +114,7 @@
     justify-content: center;
     display: block;
     color: #fff;
-    background-color: rgb(0,201,157);;
+    background-color: #a46bec;
     font-size: 1em;
     font-weight: bold;
     margin-top: 20px;
@@ -118,17 +124,17 @@
     transition: .2s ease-in;
     cursor: pointer;
     
-    border:2px solid rgb(0,201,157);
+    border:2px solid #a46bec
   }
 
   button:hover{
     background: rgb(255, 255, 255);;
-    color:rgb(0,201,157);;
-    border:2px solid rgb(0,201,157);
+    color:#a46bec;
+    border:2px solid #a46bec
   }
 
   .login{
-    height:560px;
+    height:650px;
     width: 500px;
     background: #eee;
     border-radius: 60%/10%;
@@ -136,8 +142,27 @@
     transition: .8s ease-in-out;
   }
 
+.experience{
+  width: 70%;
+  margin-left: 15% !important;
+  padding-top: 2% !important;
+  padding-left: 2% !important;
+  resize: none;
+  border:2px solid #a46bec;
+  border-radius: 5px;
+}
+
+.experience:focus{
+  outline: none !important;
+  resize: none;
+  border:2px solid #a46bec !important;
+  border-radius: 5px !important;
+
+}
+
+
 .login label{
-    color: rgb(0,201,157) !important;
+    color: #a46bec !important;
     transform: scale(.6);
     
 }
@@ -145,7 +170,7 @@
   background-color:black;
 }
 #chk:checked ~ .login{
-	transform: translateY(-560px);
+	transform: translateY(-650px);
 }
 #chk:checked ~ .login label{
     color: black !important;
@@ -153,7 +178,7 @@
 	transform: scale(1);	
 }
 #chk:checked ~ .signup label{
-    color: rgb(0,201,157) !important;
+    color: #a46bec !important;
 	transform: scale(.6);
     transform: translateY(-200px);
 }

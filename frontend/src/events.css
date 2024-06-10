@@ -1,13 +1,13 @@
 .select-dropdown {
     height: 45px; 
     transform: translateX(-21%);
-    border-color:rgb(0,201,157) !important;
+    border-color:#A46BEC !important;
 width: calc(70% ); 
     margin-bottom: 20px; 
 
   }
   .green-txt {
-    color:rgb(0,201,157) !important;
+    color: #A46BEC !important;
   }
   .scrollable-container {
     max-height: 77vh; 
@@ -35,12 +35,12 @@ width: calc(70% );
     position: relative;
     width:35vw;
     height: 8rem;
-    background: #ffffff;
+    background: #A46BEC;
     border-radius: 1rem;
     overflow: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
-    --gradient: linear-gradient(to bottom, rgb(0,201,157), rgb(0,181,141), rgb(0,161,125));
+    --gradient: linear-gradient(to bottom, #6e24c9, #A46BEC, #b296d4);
     --color: #32a6ff
   }
   .notification-white {
@@ -50,12 +50,12 @@ width: calc(70% );
     position: relative;
     width:35vw;
     height: 8rem;
-    background: #ffffff;
+    background: #A46BEC;
     border-radius: 1rem;
     overflow: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
-    --gradient: linear-gradient(to bottom, rgb(0,201,157), rgb(0,181,141), rgb(0,161,125));
+    --gradient: linear-gradient(to bottom, #6e24c9, #A46BEC, #b296d4);
     --color: #32a6f;
   }
   .notification:before {
@@ -83,7 +83,7 @@ width: calc(70% );
   }
   
   .notititle {
-    color: rgb(0,201,157);
+    color: #A46BEC;
     padding: 0.65rem 0.25rem 0.4rem 1.25rem;
     font-weight: 500;
     font-size: 1.1rem;
@@ -154,13 +154,13 @@ width: calc(70% );
 .select-dropdown {
     height: 45px;
     transform: translateX(-21%);
-    border-color: rgb(0, 201, 157) !important;
+    border-color: #A46BEC !important;
     width: calc(70%);
     margin-bottom: 20px;
 }
 
 .green-txt {
-    color: rgb(0, 201, 157) !important;
+    color: #A46BEC  !important;
 }
 
 .scrollable-container {
@@ -208,7 +208,7 @@ width: calc(70% );
 }
 
 .notititle {
-    color: rgb(0, 201, 157);
+    color: #A46BEC;
     padding: 0.65rem 0.25rem 0.4rem 1.25rem;
     font-weight: 500;
     font-size: 1.1rem;
@@ -291,7 +291,7 @@ width: calc(70% );
 .success {
   padding: 1rem;
   border-radius: 0.375rem;
-  background-color: rgb(240 253 244);
+  background-color: rgb(255, 255, 255);
 }
 
 .succes-svg {
@@ -306,12 +306,12 @@ width: calc(70% );
 
 .success-prompt-heading {
   font-weight: bold;
-  color: rgb(22 101 52);
+  color: #A46BEC;
 }
 
 .success-prompt-prompt {
   margin-top: 0.5rem;
-  color: rgb(21 128 61);
+  color: #A46BEC;
 }
 
 .success-button-container {

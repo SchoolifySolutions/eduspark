@@ -7,7 +7,7 @@ import "./Login.css";
 import "./events.css";
 
 export default function Event() {
-  const usrData = JSON.parse(localStorage.getItem("Data") || '{"User":"Login","Username":"Login","Id":-999,"type":"Volunteer"}');
+    const usrData = JSON.parse(localStorage.getItem("Data") || '{"User":"Login","Age":0,"Username":"Login","Id":-999,"type":"Student"}');
   const [selectedOrg, setSelectedOrg] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");

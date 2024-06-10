@@ -15,7 +15,7 @@ export default function Organization() {
   const history = useNavigate();
 
   // Get user data from localStorage
-  const usrData = JSON.parse(localStorage.getItem("Data") || '{"User":"Login","Username":"Login","Id":-999,"type":"Volunteer"}');
+    const usrData = JSON.parse(localStorage.getItem("Data") || '{"User":"Login","Age":0,"Username":"Login","Id":-999,"type":"Student"}');
   console.log(usrData);
 
   useEffect(() => {

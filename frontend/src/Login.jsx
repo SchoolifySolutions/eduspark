@@ -12,8 +12,9 @@ export default function Login() {
   const history = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [age, setAge] = useState(0);
   const [email, setEmail] = useState("");
-  const [UserType, setUserType] = useState("Volunteer"); 
+  const [UserType, setUserType] = useState("Student"); 
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -22,10 +23,11 @@ export default function Login() {
         email: email,
         username: username,
         password: password,
+        age:age,
         userType: UserType,
       });
-      if (UserType === "Organizer"){
-        history("/Org/");
+      if (UserType === "Mentor"){
+        history("/mentor/");
       }else {  history("/");}
       
       setErr("");
@@ -62,29 +64,30 @@ export default function Login() {
 
   return (
     <>
-      <img src={pattern} style={{ height: "100vh" }} className="absolute right-0" />
+      <img src={pattern} style={{ height: "100vh" }} className="absolute right-0 hue-rotate-[-250deg]" />
       <div className="main absolute mt-10">
         <input type="checkbox" id="chk" aria-hidden="true" />
 
         <div className="signup">
           <form onSubmit={handleSignup} className="mb-20 form">
-            <label className="text-black" htmlFor="chk">
+            <label className="text-black mt-[10vh]" htmlFor="chk">
               Sign Up
             </label>
             <p className="text-red-600 font-bold text-center mb-5">{err}</p>
-            <div className="radio-inputs">
+            <div className="radio-inputs mt-[7vh] ">
               <label className="radio">
-                <input type="radio" name="userType" value="Volunteer" checked={UserType === "Volunteer"} onChange={() => setUserType("Volunteer")} />
-                <span className="name">Volunteer</span>
+                <input type="radio" name="userType" value="Student" checked={UserType === "Student"} onChange={() => setUserType("Student")} />
+                <span className="name">Student</span>
               </label>
               <label className="radio">
-                <input type="radio" name="userType" value="Organizer" checked={UserType === "Organizer"} onChange={() => setUserType("Organizer")} />
-                <span className="name">Organizer</span>
+                <input type="radio" name="userType" value="Mentor" checked={UserType === "Mentor"} onChange={() => setUserType("Mentor")} />
+                <span className="name">Mentor</span>
               </label>
             </div>
-            <input className="py-5 m-auto mb-5" type="text" name="txt" placeholder="User Name: " required="" onChange={(e) => setUsername(e.target.value)} />
-            <input className="py-5 m-auto mb-5" type="email" name="email" placeholder="Email: " required="" onChange={(e) => setEmail(e.target.value)} />
-            <input className="py-5 m-auto mb-5" type="password" name="pswd" placeholder="Password" required="" onChange={(e) => setPassword(e.target.value)} />
+            <input className="py-5 m-auto mb-5 " type="text" name="txt" placeholder="Name: " required onChange={(e) => setUsername(e.target.value)} />
+            <input className="py-5 m-auto mb-5" type="text" name="Age" placeholder="Age: " required onChange={(e) => setAge(e.target.value)} />
+            <input className="py-5 m-auto mb-5" type="email" name="email" placeholder="Email: " required onChange={(e) => setEmail(e.target.value)} />
+            <input className="py-5 m-auto mb-5" type="password" name="pswd" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} />
             <button className="m-auto button" type="submit">
               Sign Up
             </button>
@@ -93,13 +96,13 @@ export default function Login() {
 
         <div className="login">
           <form onSubmit={handleLogin}>
-            <label htmlFor="chk" aria-hidden="true">
+            <label htmlFor="chk" className="pt-[3vh] mt-[7vh]" aria-hidden="true">
               Login
             </label>
-            <p className="text-red-600 font-bold text-center mb-5">{err}</p>
-            <input className="py-5 m-auto mb-5" type="email" name="email" placeholder="Email: " required="" onChange={(e) => setLoginEmail(e.target.value)} />
+            <p className="text-red-600 font-bold text-center mb-5 mt-[10vh]">{err}</p>
+            <input className="py-5 m-auto mb-5 mt-[15vh]" type="email" name="email" placeholder="Email: " required="" onChange={(e) => setLoginEmail(e.target.value)} />
             <input className="py-5 m-auto mb-5" type="password" name="pswd" placeholder="Password" required="" onChange={(e) => setLoginPassword(e.target.value)} />
-            <button className="button" type="submit">
+            <button className="button mt-[10vh]" type="submit">
               Log In
             </button>
           </form>
