@@ -65,7 +65,7 @@ export default function Login() {
   return (
     <>
       <img src={pattern} style={{ height: "100vh" }} className="absolute right-0 hue-rotate-[-250deg]" />
-      <div className="main absolute mt-10">
+      <div className="main absolute mt-10 w-[30vw] h-[70vh]">
         <input type="checkbox" id="chk" aria-hidden="true" />
 
         <div className="signup">
@@ -94,7 +94,7 @@ export default function Login() {
           </form>
         </div>
 
-        <div className="login">
+        <div className="login -mt-[2vh]">
           <form onSubmit={handleLogin}>
             <label htmlFor="chk" className="pt-[3vh] mt-[7vh]" aria-hidden="true">
               Login

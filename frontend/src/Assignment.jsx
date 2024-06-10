@@ -27,6 +27,18 @@ export default function Assignments () {
         fetchData();
       }, []);
     return (
-        <div></div>
+        <div>
+            <NavBar />
+            {events.map((obj, key) => (
+          <div className="notification absolute top-[10vh] mb-3 border border-4 border-[--accent]" onClick={(e) => setIndex(key)} key={key}>
+            <div className="notiglow"></div>
+            <div className="notiborderglow"></div>
+            <div className="notititle">{obj["assginment_name"]}</div>
+            <div className="notibody">{obj["assginment_Description"]}</div>
+            <div className="notibody">{obj["assginment_due_date"]}</div>
+          </div>
+        ))}
+
+        </div>
     )
 }
