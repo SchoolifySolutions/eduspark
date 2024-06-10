@@ -192,11 +192,13 @@ class Register_View(APIView):
     def post(self, request, *args, **kwargs):
         user_id = request.data.get('user_id')
         event_id = request.data.get('event_id')
-
+        print(request.data)
         try:
             user = User.objects.get(id=user_id)
             event = Event.objects.get(id=event_id)
-
+            
+            print(event.participants.all())
+            print(event)
             if user in event.participants.all():
                 return Response({'error': 'User is already registered for this event'}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -261,7 +263,7 @@ def get_user_events(request, lat, lon, dist):
 
     for event in events:
         if event.Event_Location.lower() == "remote":
-            nearby_events.append(event.Event_Location)
+            nearby_events.append(event)
         else:
             location = event.Event_Location.replace(" ", "%20")
 
@@ -277,7 +279,6 @@ def get_user_events(request, lat, lon, dist):
                     distances.append(distance)
             except (IndexError, KeyError, ValueError):
                 continue
-    
     serializer = EventSerializer(nearby_events, many=True)
     return Response({'Events': serializer.data, 'Distances': distances}, status=status.HTTP_200_OK)
 
